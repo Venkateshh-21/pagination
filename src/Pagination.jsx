@@ -78,7 +78,7 @@ function Pagination() {
         <button className="previous" disabled={page == 1} onClick={handlePrev}>
           Previous
         </button>
-        <p className="para">{page}</p>
+        <div className="para">{page}</div>
         <button
           className="next"
           disabled={page == totalPages}
