@@ -31,7 +31,7 @@ function Pagination() {
 
   const handlePrev = () => {
     console.log(data.length);
-    if (page > 0) {
+    if (page > 1) {
       SetPage((prev) => prev - 1);
     }
   };
