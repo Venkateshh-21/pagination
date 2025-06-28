@@ -7,8 +7,7 @@ function Pagination() {
   const [data, setData] = useState([]);
   const [currData, setCurrData] = useState([]);
   const [page, SetPage] = useState(1);
-  const totalPages = Math.ceil(data.length / 10);
-
+  const totalPages = data.length ? Math.ceil(data.length / 10) : 1;
   useEffect(() => {
     const dataFetch = async () => {
       try {
@@ -75,13 +74,13 @@ function Pagination() {
         </tbody>
       </table>
       <div className="buttons">
-        <button className="previous" disabled={page == 1} onClick={handlePrev}>
+        <button className="previous" disabled={page === 1} onClick={handlePrev}>
           Previous
         </button>
-        <div className="current-page">{page}</div>
+        <p className="current-page">{page}</p>
         <button
           className="next"
-          disabled={page == totalPages}
+          disabled={page === totalPages}
           onClick={handleNext}
         >
           Next
