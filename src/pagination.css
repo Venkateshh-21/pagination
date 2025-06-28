@@ -53,11 +53,15 @@
     color: white;
    
 }
-.para{
+.current-page{
    background-color: #009879;
    height: fit-content;
    width: 10px;
    align-items: center;
+   width: 20px;
+   text-align: center;
+   color: white;
+   font-family: sans-serif;
 }
 
 .tablebody{
